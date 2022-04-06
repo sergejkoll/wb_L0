@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Заказ</title>
+</head>
+<body>
+<p>Заказ {{.OrderUID}}</p>
+<ul>
+    <li>Track number: {{.track_number}}</li>
+    <li>Entry: {{.entry}}</li>
+    <li>Locale: {{.locale}}</li>
+    <li>Internal signature: {{.internal_signature}}</li>
+    <li>Customer id: {{.customer_id}}</li>
+    <li>Delivery service: {{.delivery_service}}</li>
+    <li>Shard key: {{.shardkey}}</li>
+    <li>Sm id: {{.sm_id}}</li>
+    <li>Date created: {{.date_created}}</li>
+    <li>Oof shard: {{.oof_shard}}</li>
+</ul>
+
+<p>Delivery</p>
+<ul>
+    <li>Name: {{.name}}</li>
+    <li>Phone: {{.phone}}</li>
+    <li>Zip: {{.zip}}</li>
+    <li>City: {{.city}}</li>
+    <li>Address: {{.address}}</li>
+    <li>Region: {{.region}}</li>
+    <li>Email: {{.email}}</li>
+</ul>
+
+<p>Payment</p>
+<ul>
+    <li>Transaction: {{.transaction}}</li>
+    <li>Request id: {{.request_id}}</li>
+    <li>Currency: {{.currency}}</li>
+    <li>Provider: {{.provider}}</li>
+    <li>Amount: {{.amount}}</li>
+    <li>Payment dt: {{.payment_dt}}</li>
+    <li>Bank: {{.bank}}</li>
+    <li>Delivery cost: {{.delivery_cost}}</li>
+    <li>Goods total: {{.goods_total}}</li>
+    <li>Custom fee: {{.custom_fee}}</li>
+</ul>
+
+<p>Items</p>
+<ul>
+    {{range .items}}
+    <br>
+    <li>Chrt Id: {{.ChrtId}}</li>
+    <li>Track Number: {{.TrackNumber}}</li>
+    <li>Price: {{.Price}}</li>
+    <li>Rid: {{.RID}}</li>
+    <li>Name: {{.Name}}</li>
+    <li>Sale: {{.Sale}}</li>
+    <li>Size: {{.Size}}</li>
+    <li>TotalPrice: {{.TotalPrice}}</li>
+    <li>Nm Id: {{.NmId}}</li>
+    <li>Brand: {{.Brand}}</li>
+    <li>Status: {{.Status}}</li>
+    {{end}}
+</ul>
+
+
+
+</body>
+</html>
